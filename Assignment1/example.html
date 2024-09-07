@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Example </title>
+
+   <style>
+      body{
+         background-color: #f8f9fa;
+      }
+
+      h1{
+         font-size: 24px;
+         font-weight: 500;
+         color: #212529
+      }
+
+      input{
+         color: #212529;
+         font-size: 16px;
+      }
+
+      input::placeholder{
+         color: #212529;
+         font-size: 16px;
+      }
+
+      #content{
+         /* background-color: violet; */
+         width: 313.32px;
+         height: 355.82px;
+
+         margin: 240px auto;
+      }
+
+      #emailAddressInput{
+         width: 298px;
+         height: 58px;
+
+         border: 1px solid #dee2e6;
+         border-radius: 5px 5px 0px 0px;
+
+         /* margin: 0px 0px -1px; */
+         padding-left: 12px;
+      }
+
+      #passwordInput{
+         width: 298px;
+         height: 58px;
+
+         border: 1px solid #dee2e6;
+         border-radius: 0px 0px 5px 5px;
+
+         /* margin: 0px 0px 10px;
+         padding: 16px 12px; */
+         padding-left: 12px;
+      }
+
+      #checkbox{
+         width: 298px;
+         height: 24px;
+         margin: 16px 0px;
+      }
+
+      #signInBtn{
+         width: 313.33px;
+         height: 41.33px;
+
+         font-size: 16px;
+         color: #ffffff;
+         background-color: #0d6efd;
+         border: 1px solid #0d6efd;
+         border-radius: 5px;
+
+         padding: 8px 12px;
+      }
+
+   </style>
+
+</head>
+<body>
+   <div id = "content">
+      <img src = "img/bootstrapLogo.png" style = "width: 72px; height: 57px;"/>
+      <h1> Please sign in </h1>
+
+      <div id = "email"> 
+         <input type = "text" id = "emailAddressInput" placeholder ="Email address">
+      </div>
+
+      <div id = "password">
+         <input type = "password" id = "passwordInput" placeholder = "Password">
+      </div>
+
+      <div id = "checkbox">
+         <input type = "checkbox" id = "checkboxInput" style = "width: 16px; height: 16px; border: 1px solid #ffffff; border-radius: 10px;">
+         <label for = "checkboxInput" style = "line-height: 24px;"> Remember me </label>
+      </div>
+
+      <button id = "signInBtn"> Sign in </button>
+
+      <div style = "font-size: 16px; color: #212529bf; margin: 48px 0px 16px;"> Copyright. 2017-2024 </div>
+   </div>
+   
+</body>
+</html>

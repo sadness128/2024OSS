@@ -3,44 +3,100 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
+   <title> Example </title>
 
    <style>
-      a{
-      color: #0000ee;
+      body{
+         background-color: #f8f9fa;
       }
+
+      h1{
+         font-size: 24px;
+         font-weight: 500;
+         color: #212529
+      }
+
+      input{
+         color: #212529;
+         font-size: 16px;
+      }
+
+      input::placeholder{
+         color: #212529;
+         font-size: 16px;
+      }
+
+      #content{
+         width: 313.32px;
+         height: 355.82px;
+
+         margin: 240px auto;
+      }
+
+      #emailAddressInput{
+         width: 298px;
+         height: 58px;
+
+         border: 1px solid #dee2e6;
+         border-radius: 5px 5px 0px 0px;
+
+         padding-left: 12px;
+      }
+
+      #passwordInput{
+         width: 298px;
+         height: 58px;
+
+         border: 1px solid #dee2e6;
+         border-radius: 0px 0px 5px 5px;
+
+         padding-left: 12px;
+      }
+
+      #checkbox{
+         width: 298px;
+         height: 24px;
+         margin: 16px 0px;
+      }
+
+      #signInBtn{
+         width: 313.33px;
+         height: 41.33px;
+
+         font-size: 16px;
+         color: #ffffff;
+         background-color: #0d6efd;
+         border: 1px solid #0d6efd;
+         border-radius: 5px;
+
+         padding: 8px 12px;
+      }
+
    </style>
 
 </head>
 <body>
-   <h1> Welcome to Eunseo Jeong's Homepage (22300689) </h1>
-   Use the menu to select different Stylesheets
+   <div id = "content">
+      <img src = "img/bootstrapLogo.png" style = "width: 72px; height: 57px;"/>
+      <h1> Please sign in </h1>
 
-   <ul>
-      <li> Stylesheet 1 </li>
-      <li> Stylesheet 2 </li>
-      <li> Stylesheet 3 </li>
-      <li> Stylesheet 4 </li>
-      <li> No Stylesheet </li>
-   </ul>
+      <div id = "email"> 
+         <input type = "text" id = "emailAddressInput" placeholder ="Email address">
+      </div>
 
-   <h1> Same Page Different Stylesheets </h1>
-   This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
-   <br/>
-   <a href="https://chocopieagstandup128.netlify.app/assignment1/style1"> Stylesheet1</a>,
-   <a href="https://chocopieagstandup128.netlify.app/assignment1/style2"> Stylesheet2</a>,
-   <a href=""> Stylesheet3</a>,
-   <a href=""> Stylesheet4</a>.
+      <div id = "password">
+         <input type = "password" id = "passwordInput" placeholder = "Password">
+      </div>
 
-   <h2> No Styles </h2>
-   This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
-   <br/>
-   <a href=""> No Stylesheet</a>.
+      <div id = "checkbox">
+         <input type = "checkbox" id = "checkboxInput" style = "width: 16px; height: 16px; border: 1px solid #ffffff; border-radius: 10px;">
+         <label for = "checkboxInput" style = "line-height: 24px;"> Remember me </label>
+      </div>
 
-   <h3> Side-Bar </h3>
-   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-   <br/><br/>
-   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+      <button id = "signInBtn"> Sign in </button>
 
+      <div style = "font-size: 16px; color: #212529bf; margin: 48px 0px 16px;"> &copy; 2017-2024 </div>
+   </div>
+   
 </body>
 </html>

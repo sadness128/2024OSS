@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title> Form No Style </title>
+
 </head>
 <body>
    <div class="logo"><image src="image/WizardingWorld_Logo-1.jpg" width="200px" height="140px"/></div>
@@ -12,37 +13,38 @@
       <p> Enjoy magical features including the official sorting<br/>ceremony, portrait maker and more! </p>
    </div><br/>
 
-      <form action="form_ok.php" method="post" target="_blank">
-         <fieldset>
-            <legend> �뾿 �뾾 �뾿 </legend>
-            <div>
-               <label for="dateofbirth"> <span>*</span> DATE OF BIRTH </label><br/>
-               <input type="date" name="dateofbirth" id="dateofbirth" autofocus/><br/>
-            </div>
+   <form action="form_ok.php" method="post" id="form">
+      <fieldset>
+         <legend> ◇ ◆ ◇ </legend>
+         
+         <div>
+            <label for="dateofbirth"> <span>*</span> DATE OF BIRTH </label> <label id="vlabel_bday"> </label><br/>
+            <input type="date" name="dateofbirth" id="dateofbirth" tabindex="1" autofocus required/><br/>
+         </div>
                
             <div>
-               <label for="emailaddress"> <span>*</span> EMAIL ADDRESS </label><br/>
-               <input type="text" name="emailaddress" id="emailaddress"/>
+               <label for="emailaddress"> <span>*</span> EMAIL ADDRESS </label> <label id="vlabel_email"> </label><br/>
+               <input type="text" name="emailaddress" id="emailaddress" tabindex="2" required/>
             </div>
              
             <div>
-               <label for="password"> <span>*</span> PASSWORD </label><br/>
-               <input type="password" name="password" id="password"/>
+               <label for="password"> <span>*</span> PASSWORD </label> <label id="vlabel_pw"> </label><br/>
+               <input type="text" name="password" id="password" tabindex="3" required/>
             </div>
 
             <div>
-               <label for="password_confirm" style="margin-right: 10px;"> <span>*</span> CONFIRM PASSWORD </label> <label id="vlabel_pw_2"> </label><br/>
-               <input type="password" name="password_confirm" id="password_confirm" tabindex="4" required onchange="valid_pw_2();"/>
+               <label for="password_confirm"> <span>*</span> CONFIRM PASSWORD </label> <label id="vlabel_pw_2"> </label><br/>
+               <input type="password" name="password_confirm" id="password_confirm" tabindex="4" required/>
             </div>
                
             <div>
                <div id="div_fname">
-                  <label for="fname"> <span>*</span> FIRST NAME </label><br/>
-                  <input type="text" name="fname" id="fname"/><br/>
+                  <label for="fname"> <span>*</span> FIRST NAME </label> <label id="vlabel_fname"> </label><br/>
+                  <input type="text" name="fname" id="fname" tabindex="5" required/><br/>
                </div>
                <div id="div_lname">
-                  <label for="lname"> <span>*</span> LAST NAME </label><br/>
-                  <input type="text" name="lname" id="lname"/>
+                  <label for="lname"> <span>*</span> LAST NAME </label> <label id="vlabel_lname"> </label><br/>
+                  <input type="text" name="lname" id="lname" tabindex="6" required/>
                </div>
             </div>
                
@@ -76,27 +78,27 @@
    
             <div>
                <label for="dormitory"> FAVORITE DORMITORY </label><br/>
-               <select id="dormitory" name="dormitory"  style="margin: 5px 0px">
-                  <option value="gryffindor"> GRYFFINDOR </option>
+               <select id="dormitory" name="dormitory">
+                  <option value="gryffindor" selected> GRYFFINDOR </option>
                   <option value="slytherin"> SLYTHERIN </option>
                   <option value="ravenclaw"> RAVENCLAW </option>
-                  <option value="hufflepuff" selected> HUFFLEPUFF </option>
+                  <option value="hufflepuff"> HUFFLEPUFF </option>
                </select>
             </div><br/>
          
             <div id="confirm_div">
-               <label> <span>*</span> CONFIRMATION PHRASE </label>
+               <label for="confirm"> <span>*</span> CONFIRMATION PHRASE </label><label id="vlabel_confirm"> </label>
                <p> I solemnly swear that I am up to no good. </p>
-               <textarea name="confirm" id="confirm_area" cols="45" rows="3"></textarea>
+               <textarea name="confirm" id="confirm_area" cols="45" rows="3" tabindex="6" required></textarea>
             </div>
          
          <p> By proceeding you agree to our <a href="https://www.wizardingworld.com/terms/terms-us-ca" target="_blank">Terms of Use</a> and acknowledge our <a href="https://www.wizardingworld.com/privacy" target="_blank">Privacy Policy</a> </p><br/>
-         <div> <input type="submit" value="SIGN UP"/> </div>
+         <div> <input type="submit" value="SIGN UP" id="signUp"/> </div>
       </fieldset>
    </form>
       
    <h2> Already have an account? </h2>
-   <div>
+   <div style="text-align: center;">
       <button type="button"> LOG IN </button>
    </div>
    <br/><br/><br/><br/><br/>

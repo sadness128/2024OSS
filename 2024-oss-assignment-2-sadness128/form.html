@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="EUC-KR">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Dynamic Web Page </title>
+
+   <style>
+      h1{
+         margin-bottom: 0px;
+      }
+
+      p{
+         font-weight: 500;
+         margin-top: 5px;
+         margin-bottom: 10px;
+      }
+
+      input[type=text]{
+         width: 200px;
+         height: 25px;
+         padding-left: 10px;
+         padding-right: 10px;
+         border: 1px solid #d4d4d4;
+         border-radius: 5px;
+         outline: none;
+         box-sizing: border-box;
+      }
+
+      input[type=text]:focus{
+         background-color: rgb(222, 255, 242);
+      }
+
+      li::marker{
+         content: '♣ ';
+      }
+
+      #div_append{
+         margin-top: 15px;
+         margin-left: 3px;
+      }
+
+      #register, #delete{
+         width: 75px;
+         height: 25px;
+         border: none;
+         border-radius: 5px;
+         box-sizing: border-box;
+         color: #ffffff;
+         background-color: #d4d4d4;
+      }
+
+      #register:hover{
+         border: none;
+         color: #ffffff;
+         background-color: green;
+      }
+
+      #delete:hover{
+         border: none;
+         color: #ffffff;
+         background-color: red;
+      }
+
+   </style>
+</head>
+
+<body>
+   <div> 
+      <h1> Dynamic Web Page </h1>
+      <p> Press the 'Register' button or 'Enter' key! </p> 
+   </div>
+   <input type="text" id="input_append" onkeyup="enterkey()"/>
+   <button id="register" onclick="listener_append()"> Register </button>
+   <button id="delete" onclick="delete_all()"> Delete All </button>
+   <div id="div_append"></div>
+
+   <script>
+      function listener_append(){
+         let div_append = document.getElementById("div_append");
+         let input_append = document.getElementById("input_append").value;
+         
+         if(input_append == "" || input_append == "undefined")
+            return false;
+         div_append.innerHTML += "<li onclick='listener_remove(this)'>" + input_append + "</li>";
+         document.getElementById("input_append").value = "";
+      }
+
+      function listener_remove(obj){
+         obj.remove();
+      }
+
+      function delete_all(){
+         let div_append = document.getElementById("div_append");
+         div_append.innerHTML = "";
+         document.getElementById("input_append").value = "";
+      }
+
+      function enterkey(){
+         if (window.event.keyCode == 13){
+            listener_append();
+         }
+      }
+   </script>
+   
+</body>
+</html>

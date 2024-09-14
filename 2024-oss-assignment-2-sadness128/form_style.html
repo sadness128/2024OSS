@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Form Style </title>
+
+   <style>
+      a{
+         color:#fcce15;
+      }
+
+      body{
+         font-family: "Copperplate Gothic Light";
+         background-color: #f1f1f12f;
+      }
+
+      button, input[type=submit]{
+         font-family: "Copperplate Gothic Light";
+         font-weight: 600;
+         color:#fcce15;
+         width: 380px;
+         height: 50px;
+         border: 1.2px solid #fcce15;
+         border-radius: 50px;
+         margin: 0 auto;
+         box-sizing: border-box;
+         cursor: pointer;
+         background-color: #8B0000;
+      }
+
+      button:hover, input[type=submit]:hover{
+         color: #8B0000;
+         background-color: #fcce15;
+         border: 1.2px solid #8B0000;
+      }
+
+      div.logo,div.top{
+         text-align: center;
+      }
+
+      fieldset{
+         width: 408px;
+         height: 950px;
+         border-top: 1.1px solid #121212;
+         border-right: none;
+         border-bottom: 1.1px solid #121212;
+         border-left: none;
+      
+         box-sizing: border-box;
+      }
+
+      form{
+         width: 424px;
+         margin: 0 auto;
+         padding: 15px 0px;
+         box-sizing: border-box;
+      }
+
+      h2{
+         text-align: center;
+      }
+
+      input[type=checkbox], input[type=radio]{
+         accent-color: #8B0000;
+      }
+
+      input[type=date],input[type=password],input[type=text],select,textarea{
+         font-family: "Copperplate Gothic Light";
+         font-size: 13.5px;
+         border: 1.1px solid #d4d4d4;
+         border-radius: 8px;
+
+         width: 380px;
+         height: 50px;
+         margin: 10px;
+         padding: 16px 21px;
+         box-sizing: border-box;
+
+         -webkit-transition: 0.5s;
+         transition: 0.5s;
+         outline: none;
+      }
+
+      input[type=checkbox]{
+         border: 1.1px solid #d4d4d4;
+         border-radius: 8px;
+      }
+
+      input[type=date]:focus,input[type=password]:focus,input[type=text]:focus, select:focus,textarea:focus{
+         color: #fcce15;;
+         background-color: #8B0000;
+         border: 1.2px solid #fcce15;
+         outline: none;
+      }
+
+      input[type=radio],option,select{
+         font-family: "Copperplate Gothic Light";
+         font-size: 13px;
+         font-weight: 400;
+      }
+
+      label{
+         font-size: 13.5px;
+         font-weight: 600;
+
+         margin: 20px 0px 12px;
+      }
+
+      legend{
+         text-align: center;
+         font-size: 12px;
+         font-weight: 900;
+         color: #121212;
+      }
+
+      span{
+         font-size: 16px;
+         color: #8B0000;
+      }
+
+      select{
+         text-align: center;
+      }
+
+      textarea{
+         margin: 5px;
+         resize: none;
+      }
+
+      #div_fname, #div_lname{
+         width:185px;
+         height:100px;
+         box-sizing: border-box;
+         float: left;
+      }
+
+      #div_form{
+         margin: 0 auto;
+      }
+
+      #div_lname{
+         margin-left: 10px;
+      }
+
+      #fname, #lname{
+         width: 185px;
+         height: 50px;
+         box-sizing: border-box;
+      }
+      
+      #series{
+         font-weight: 400;
+      }
+   </style>
+</head>
+<body>
+   <div class="logo"><image src="image/WizardingWorld_Logo-1.jpg" width="200px" height="140px"/></div>
+   <div class="top">
+      <h1> Sign Up </h1>
+      <p style="font-size: 14.5px"> Enjoy magical features including the official sorting<br/>ceremony, portrait maker and more! </p>
+   </div><br/>
+
+      <form action="form_ok.php" method="post" target="_blank">
+         <fieldset>
+            <legend> ◇ ◆ ◇ </legend>
+            <div>
+               <label for="dateofbirth"> <span>*</span> DATE OF BIRTH </label><br/>
+               <input type="date" name="dateofbirth" id="dateofbirth" autofocus/><br/>
+            </div>
+               
+            <div>
+               <label for="emailaddress"> <span>*</span> EMAIL ADDRESS </label><br/>
+               <input type="text" name="emailaddress" id="emailaddress"/>
+            </div>
+             
+            <div>
+               <label for="password"> <span>*</span> PASSWORD </label><br/>
+               <input type="password" name="password" id="password"/>
+            </div>
+               
+            <div>
+               <div id="div_fname">
+                  <label for="fname"> <span>*</span> FIRST NAME </label><br/>
+                  <input type="text" name="fname" id="fname"/><br/>
+               </div>
+               <div id="div_lname">
+                  <label for="lname"> <span>*</span> LAST NAME </label><br/>
+                  <input type="text" name="lname" id="lname"/>
+               </div>
+            </div>
+               
+            <div>
+               <label for="gender"> GENDER </label><br/>
+               <input type="radio" name="gender" id="male" value="male"/>
+               <label for="male" style="font-weight: 400"> MALE </label>
+               <input type="radio" name="gender" id="female" value="female"/>
+               <label for="female" style="font-weight: 400"> FEMALE </label>
+               <input type="radio" name="gender" id="other" value="other"/>
+               <label for="other" style="font-weight: 400"> OTHER  </label>
+            </div><br/>
+   
+            <div>
+               <label> HAVE YOU EVER SEEN... </label><br/>
+               <input type="checkbox" name="series" id="series1" value="1"/>
+               <label for="series1" id="series"> Harry Potter and the Sorcerer's Stone </label><br/>
+               <input type="checkbox" name="series" id="series2" value="2"/>
+               <label for="series2" id="series"> Harry Potter and the Chamber of Secret </label><br/> 
+               <input type="checkbox" name="series" id="series3" value="3"/>
+               <label for="series3" id="series"> Harry Potter and the Prisoner of Azkaban </label><br/> 
+               <input type="checkbox" name="series" id="series4" value="4"/>
+               <label for="series4" id="series"> Harry Potter and the Goblet of Fire </label><br/> 
+               <input type="checkbox" name="series" id="series5" value="5"/>
+               <label for="series5" id="series"> Harry Potter and the Older of the Phoenix </label><br/> 
+               <input type="checkbox" name="series" id="series6" value="6"/>
+               <label for="series6" id="series"> Harry Potter and the Half-Blood Prince </label><br/> 
+               <input type="checkbox" name="series" id="series7" value="7"/>
+               <label for="series7" id="series"> Harry Potter and the Deathly Hallows </label>
+            </div><br/>
+   
+            <div>
+               <label for="dormitory"> FAVORITE DORMITORY </label><br/>
+               <select id="dormitory" name="dormitory"  style="margin: 5px 0px" onchange="selectChange();">
+                  <option value="gryffindor"> GRYFFINDOR </option>
+                  <option value="slytherin"> SLYTHERIN </option>
+                  <option value="ravenclaw"> RAVENCLAW </option>
+                  <option value="hufflepuff" selected> HUFFLEPUFF </option>
+               </select>
+            </div><br/>
+         
+            <div id="confirm_div">
+               <label> <span>*</span> CONFIRMATION PHRASE </label>
+               <p style="font-size: 13px; margin:5px"> I solemnly swear that I am up to no good. </p>
+               <textarea name="confirm" id="confirm_area" cols="45" rows="3"></textarea>
+            </div>
+         
+         <p style="font-weight: 400; font-size: 12.5px; text-align: center;"> By proceeding you agree to our <a href="https://www.wizardingworld.com/terms/terms-us-ca" target="_blank">Terms of Use</a> and acknowledge our <a href="https://www.wizardingworld.com/privacy" target="_blank">Privacy Policy</a> </p><br/>
+         <div style="text-align: center;"> <input type="submit" value="SIGN UP"/> </div>
+      </fieldset>
+   </form>
+      
+   <h2> Already have an account? </h2>
+   <div style="text-align: center;">
+      <button type="button"> LOG IN </button>
+   </div>
+   <br/><br/><br/><br/><br/>
+
+</body>
+</html>

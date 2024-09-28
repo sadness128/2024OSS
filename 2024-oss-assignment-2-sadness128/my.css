@@ -1,0 +1,97 @@
+*{
+   font-family: Arial;
+}
+
+@media only screen and (max-width: 430px){
+   h1{
+      font-size: 20px;
+   }
+   p{
+      font-size: 13px;
+   }
+   label{
+      font-size: 13px;
+   }
+   span{
+      font-size: 12px;
+   }
+}
+
+#btn_div{
+   text-align: center;
+}
+
+#title_div{
+   text-align: center;
+   margin: 80px;
+}
+
+#tnum{
+   color: white;
+   background-color: #212529;
+}
+
+.info{
+   margin: 5px;
+}
+
+a{
+   color: #212529;
+}
+
+fieldset{
+   border-top: 1px solid #d4d4d4;
+   border-bottom: 1px solid #d4d4d4
+}
+
+form{
+   width: 300px;
+   margin: 0 auto;
+}
+
+input[type=date]{
+   text-align: center;
+}
+
+input[type=radio]{
+   accent-color: #212529;
+}
+
+input[type=text], input[type=email], input[type=date], select, datalist, textarea{
+   width: 300px;
+   height: 50px;
+   padding: 15px 15px;
+   border: 0.5px solid #d4d4d4;
+   border-radius: 10px;
+   -webkit-transition: 0.5s;
+   transition: 0.5s;
+   outline: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=date]:focus, select:focus, datalist:focus, textarea:focus{
+   color: white;
+   background-color: #212529;
+   outline: none;
+}
+
+label{
+   font-size: 16px;
+   font-weight: 500;
+   margin: 3px 10px 3px 0px;
+}
+
+select{
+   text-align: center;
+}
+
+span{
+   font-size: 15px;
+}
+
+table, tr, th, td{
+   text-align: center;
+}
+
+textarea{
+   resize: none;
+}

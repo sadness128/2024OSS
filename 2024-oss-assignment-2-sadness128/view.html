@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> view.html </title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="./my.css"/>
+</head>
+<body>
+   <div id="title_div">
+      <h1> ES's FRIENDS </h1>
+      <p> My Everything </p>
+   </div>
+
+   <div>
+      <form>
+         <fieldset><br/>
+            <div class="info">
+               <label>Name?</label> <span>정은서</span>
+            </div>
+            
+            <div class="info">
+               <label>Phone #?</label> <span>010-2438-7804</span>
+            </div>
+
+            <div class="info">
+               <label>Email?</label> <span>es_o0o0_@naver.com</span>
+            </div>
+
+            <div class="info">
+               <label>Gender?</label> <span>Female</span>
+            </div>
+
+            <div class="info">
+               <label>Birthday?</label> <span>2004-01-28</span>
+            </div>
+
+            <div class="info">
+               <label>MBTI?</label> <span>ISFP</span>
+            </div>
+
+            <div class="info">
+               <label>Major?</label> <span>컴퓨터공학심화</span>
+            </div>
+
+            <div class="info">
+               <label>Hometown?</label> <span>서울</span>
+            </div>
+
+            <div class="info">
+               <label>The place we met for the first time?</label> <span>기억이 나지 않아요!</span>
+            </div>
+
+            <div class="info">
+               <label>A word to her dear?</label> <span>사랑해</span>
+            </div><br/>
+         </fieldset><br/><br/>
+
+            <div id="btn_div">
+               <!-- 수정 버튼 -> edit.html -->
+               <button type="button" class="btn btn-dark" onclick="location.href='./edit.html'"> Edit </button>
+               <button type="button" class="btn btn-dark" onclick="confirm('게시물을 삭제할까요?')"> Delete </button>
+               <!-- 목록 버튼 -> index.html -->
+               <button type="button" class="btn btn-dark" onclick="location.href='./index.html'"> List </button>
+            </div>
+      </form>
+   </div>
+</body>
+</html>

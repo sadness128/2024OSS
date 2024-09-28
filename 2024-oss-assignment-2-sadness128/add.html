@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> add.html </title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="./my.css"/>
+</head>
+<body>
+   <div id="title_div">
+      <h1> ES's FRIENDS </h1>
+      <p> My Everything </p>
+   </div>
+
+   <div>
+      <form>
+         <fieldset><br/>
+            <div id="fname_div">
+               <label for="fname"> Name? </label><label id="vlabel_fname"></label><br/>
+               <input type="text" id="fname" name="fname"/>
+            </div><br/>
+            
+            <div id="fphonenum_div">
+               <label for="fphonenum"> Phone #? </label><label id="vlabel_phone#"></label><br/>
+               <input type="text" id="fphonenum" name="fphonenum"/>
+            </div><br/>
+
+            <div id="femail_div">
+               <label for="femail"> Email? </label><label id="vlabel_email"></label><br/>
+               <input type="email" id="femail" name="femail"/>
+            </div><br/>
+
+            <div id="fgender_div">
+               <!-- radio는 name이 같아야 다자택일이 가능함! -->
+               <label> Gender? </label><label id="vlabel_gender"></label><br/>
+               <input type="radio" id="male" name="fgender" value="male"/>
+               <label for="male"> Male </label>
+
+               <input type="radio" id="female" name="fgender" value="female"/>
+               <label for="female"> Female </label>
+            </div><br/>
+
+            <div id="fbday_div">
+               <label for="fbday"> Birthday? </label><label id="vlabel_bday"></label><br/>
+               <input type="date" id="fbday" name="fbday"/>
+            </div><br/>
+
+            <div id="fmbti_div">
+               <label for="fmbti"> MBTI? </label><br/>
+               <select id="fmbti" name="fmbti">
+                  <option value="estj"> ESTJ </option>
+                  <option value="estp"> ESTP </option>
+                  <option value="esfj"> ESFJ </option>
+                  <option value="esfp"> ESFP </option>
+                  <option value="entj"> ENTJ </option>
+                  <option value="entp"> ENTP </option>
+                  <option value="enfj"> ENFJ </option>
+                  <option value="enfp"> ENFP </option>
+                  <option value="istj"> ISTJ </option>
+                  <option value="istp"> ISTP </option>
+                  <option value="isfj"> ISFJ </option>
+                  <option value="isfp"> ISFP </option>
+                  <option value="intj"> INTJ </option>
+                  <option value="intp"> INTP </option>
+                  <option value="infj"> INFJ </option>
+                  <option value="infp"> INFP </option>
+               </select>
+            </div><br/>
+
+            <div id="fmajor_div">
+               <label for="fmajor"> Major? </label><label id="vlabel_major"></label><br/>
+               <input list="fmajor_l" id="fmajor" name="fmajor"/>
+               <datalist id="fmajor_l">
+                  <option value="GE"> <option value="ICT 융합"> <option value="ACE">
+                  <option value="국제지역학"> <option value="영어">
+                  <option value="경영학"> <option value="경제학"> <option value="GM">
+                  <option value="한국법"> <option value="UIL">   
+                  <option value="상담심리학"> <option value="사회복지학">
+                  <option value="언론정보학"> <option value="공연영상학">
+                  <option value="건설공학"> <option value="도시환경공학">
+                  <option value="생명과학부"> 
+                  <option value="기계공학"> <option value="전자제어공학">
+                  <option value="컴퓨터공학심화"> <option value="컴퓨터공학"> <option value="전자공학심화"> <option value="전자공학"> <option value="IT">
+                  <option value="시각디자인"> <option value="제품디자인">
+                  <option value="글로벌한국학"> <option value="수학통계학"> <option value="학생설계융합"> <option value="글로벌융합">
+                  <option value="AI 융합"> <option value="데이터사이언스">
+               </datalist>
+            </div><br/>
+
+            <div id="fhometown_div">
+               <label for="fhometown"> Hometown? </label><label id="vlabel_hometown"></label><br/>
+               <input type="text" id="fhometown" name="fhometown"/>
+            </div><br/>
+
+            <div id="fplave_div">
+               <label for="fplace"> The place we met for the first time? </label><label id="vlabel_place"></label><br/>
+               <input list="fplace_l" id="fplace" name="fplace"/>
+               <datalist id="fplace_l">
+                  <option value="진리침례교회">
+                  <option value="수진초등학교병설유치원">
+                  <option value="금북초등학교">
+                  <option value="금호여자중학교">
+                  <option value="한양대학교사범대학부속고등학교">
+                  <option value="한동대학교">
+               </datalist>
+            </div><br/>
+
+            <div id="fcomment_div">
+               <label for="fcomment"> A word to her dear? </label><label id="vlabel_comment"></label><br/>
+               <textarea id="fcomment" name="fcomment" ></textarea>
+            </div><br/>
+         </fieldset><br/>
+
+            <div id="btn_div">
+               <button type="button" class="btn btn-dark" onclick="valid_check()"> Confirm </button>
+               <!-- 취소 버튼 -> index.html -->
+               <button type="button" class="btn btn-dark" onclick="location.href='./index.html'"> Cancel </button>
+            </div>
+      </form>
+   </div><br/><br/>
+
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+   <script>
+      function valid_check(){
+         // 이름 입력 여부 확인
+         let name =  $("#fname").val();
+         if (name.length == 0){
+            document.getElementById("vlabel_fname").innerHTML = "Please enter your name";
+            document.getElementById("vlabel_fname").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_fname").innerHTML = "";
+         }
+
+         // 전화번호 입력 여부 확인
+         let phonenum = $("#fphonenum").val();
+         if (phonenum.length == 0){
+            document.getElementById("vlabel_phone#").innerHTML = "Please enter your phone number";
+            document.getElementById("vlabel_phone#").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_phone#").innerHTML = "";
+         }
+
+         // 이메일 입력 여부 확인
+         let email = $("#femail").val();
+         if (email.length == 0){
+            document.getElementById("vlabel_email").innerHTML = "Please enter your email";
+            document.getElementById("vlabel_email").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_email").innerHTML = "";
+         }
+
+         // 성별 체크 여부 확인
+         let gender =  $('input:radio[name=fgender]').is(":checked");
+         if (gender == false){
+            document.getElementById("vlabel_gender").innerHTML = "Please check the gender";
+            document.getElementById("vlabel_gender").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_gender").innerHTML = "";
+         }
+
+         // 생일 입력 여부 확인
+         let bday = $("#fbday").val();
+         if (bday.length == 0){
+            document.getElementById("vlabel_bday").innerHTML = "Please enter your birthday";
+            document.getElementById("vlabel_bday").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_bday").innerHTML = "";
+         }
+
+         // 전공 입력 여부 확인
+         let major = $("#fmajor").val();
+         if (major.length == 0){
+            document.getElementById("vlabel_major").innerHTML = "Please enter your major";
+            document.getElementById("vlabel_major").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_major").innerHTML = "";
+         }
+
+         // 고향 입력 여부 확인
+         let hometown = $("#fhometown").val();
+         if (hometown.length == 0){
+            document.getElementById("vlabel_hometown").innerHTML = "Please enter your hometown";
+            document.getElementById("vlabel_hometown").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_hometown").innerHTML = "";
+         }
+
+         // 첫만남 입력 여부 확인
+         let place = $("#fplace").val();
+         if (place.length == 0){
+            document.getElementById("vlabel_place").innerHTML = "Please enter our first meet place";
+            document.getElementById("vlabel_place").style.color = "#ff5733";
+            return;
+         } else{
+            document.getElementById("vlabel_place").innerHTML = "";
+         }
+
+         let comment = $("#fcomment").val();
+         if (comment.length == 0){
+            document.getElementById("vlabel_comment").innerHTML = "Please enter comment to me";
+            document.getElementById("vlabel_comment").style.color = "#ff5733";
+            return;
+         }
+         else{
+            document.getElementById("vlabel_comment").innerHTML = "";
+         }
+
+         alert('게시물이 추가됩니다');
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "정은서",
+      "age": "21",
+      "major": "컴퓨터공학",
+      "mbti": "ESTP"
+    },
+    {
+      "id": "2",
+      "name": "윤선미",
+      "age": "21",
+      "major": "사회복지",
+      "mbti": "INFJ"
+    },
+    {
+      "id": "3",
+      "name": "김세윤",
+      "age": "23",
+      "major": "국제지역학",
+      "mbti": "INFP"
+    },
+    {
+      "id": "4",
+      "name": "정유빈",
+      "age": "21",
+      "major": "한국법",
+      "mbti": "ISTP"
+    },
+    {
+      "id": "5",
+      "name": "김예준",
+      "age": "24",
+      "major": "자율전공",
+      "mbti": "INFP"
+    },
+    {
+      "id": "6",
+      "name": "박주형",
+      "age": "21",
+      "major": "시각디자인",
+      "mbti": "ENTP"
+    },
+    {
+      "id": "7",
+      "name": "박예림",
+      "age": "25",
+      "major": "시각디자인",
+      "mbti": "ISFP"
+    },
+    {
+      "id": "8",
+      "name": "최다니엘",
+      "age": "25",
+      "major": "상담심리",
+      "mbti": "ENFP"
+    },
+    {
+      "id": "9",
+      "name": "이은혜",
+      "age": "23",
+      "major": "컴퓨터공학",
+      "mbti": "ISFJ"
+    },
+    {
+      "id": "10",
+      "name": "이윤지",
+      "age": "24",
+      "major": "컴퓨터공학",
+      "mbti": "INTJ"
+    },
+    {
+      "id": "11",
+      "name": "임예진",
+      "age": "22",
+      "major": "컴퓨터공학",
+      "mbti": "INTP"
+    },
+    {
+      "id": "12",
+      "name": "윤종하",
+      "age": "23",
+      "major": "전자공학",
+      "mbti": "INTJ"
+    },
+    {
+      "id": "13",
+      "name": "장태희",
+      "age": "23",
+      "major": "컴퓨터공학",
+      "mbti": "INFP"
+    },
+    {
+      "id": "14",
+      "name": "김태연",
+      "age": "23",
+      "major": "컴퓨터공학",
+      "mbti": "ESFJ"
+    },
+    {
+      "id": "15",
+      "name": "이수민",
+      "age": "22",
+      "major": "컴퓨터공학",
+      "mbti": "ESFJ"
+    },
+    {
+      "id": "16",
+      "name": "배현재",
+      "age": "25",
+      "major": "컴퓨터공학",
+      "mbti": "ISTJ"
+    },
+    {
+      "id": "17",
+      "name": "김다혜",
+      "age": "21",
+      "major": "건축",
+      "mbti": "ENFJ"
+    },
+    {
+      "id": "18",
+      "name": "박민해",
+      "age": "21",
+      "major": "ICT 융합",
+      "mbti": "INFP"
+    },
+    {
+      "id": "19",
+      "name": "정지민",
+      "age": "20",
+      "major": "한국법",
+      "mbti": "ISFJ"
+    },
+    {
+      "id": "20",
+      "name": "조은빈",
+      "age": "20",
+      "major": "자율전공",
+      "mbti": "ENFP"
+    }
+  ]
+}

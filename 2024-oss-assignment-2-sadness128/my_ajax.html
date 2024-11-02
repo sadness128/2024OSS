@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Ajax practice </title>
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+   <style>
+      /* #inputDiv{
+         width: 300px;
+         height: 300px;
+         background-color: pulm;
+         color: red;
+      } */
+      input{
+         width: 100PX;
+      }
+   </style>
+</head>
+<body>
+   <div id="inputDiv">
+      ID: <input type="text" id="id"/><br/>
+      NAME: <input type="text" id="name"/><br/>
+      AGE: <input type="text" id="age"/><br/>
+      MAJOR: <input type="text" id="major"/><br/>
+      MBTI: <input type="text" id="mbti"/>
+   </div><br/>
+   
+   <button id="getData" onclick="getDataFromJSONFile()"> Get </button>
+   <button id="createData" onclick="createDataToJSONFile()"> Create </button>
+   <button id="updateData" onclick="updateDataToJSONFile()"> Update </button>
+   <button id="deleteData" onclick="deleteDataFromJSONFile()"> Delete </button><br/><br/>
+
+   <div id="div_students"></div>
+
+   <script>
+      function getDataFromJSONFile(){
+         const xhr = new XMLHttpRequest();
+         xhr.open("GET", "http://localhost:3000/students/");
+         xhr.setRequestHeader("content-type", "application/json");
+         xhr.send();
+
+         xhr.onload = () => {
+            if (xhr.status === 200){
+               $("#div_students").html("");
+               let students = JSON.parse(xhr.response);
+               students.forEach((item) => {
+                  $("#div_students").append("<div>" + item.id + ". " + item.name + "(" + item.age + ")" + " / " + item.major + " / " + item.mbti + "</div>");
+               });
+            }
+         }
+      }
+
+      function createDataToJSONFile(){
+         const xhr = new XMLHttpRequest();
+         xhr.open("POST", "http://localhost:3000/students/");
+         xhr.setRequestHeader("content-type", "application/json;chatset=UTF-8");
+
+         let data = {id:$("#id").val(), name:$("#name").val(), age:$("#age").val(), major:$("#major").val(), mbti:$("#mbti").val()};
+
+         xhr.send(JSON.stringify(data));
+         xhr.onload = () => {
+            if (xhr.status === 201){
+               getDataFromJSONFile();
+            }
+         }
+      }
+
+      function updateDataToJSONFile(){
+         let id = $("#id").val();
+         alert("id " + id + " is updated!");
+         const xhr = new XMLHttpRequest();
+         xhr.open("PUT", "http://localhost:3000/students/" + id);
+         xhr.setRequestHeader("content-type", "application/json;chatset=UTF-8");
+
+         let data = {id:$("#id").val(), name:$("#name").val(), age:$("#age").val(), major:$("#major").val(), mbti:$("#mbti").val()};
+
+         xhr.send(JSON.stringify(data));
+         xhr.onload = () => {
+            if (xhr.status === 200){
+               getDataFromJSONFile();
+            }
+         }
+      }
+
+      function deleteDataFromJSONFile(){
+         let id = $("#id").val();
+         alert("id " + id + " is deleted!");
+         const xhr = new XMLHttpRequest();
+         xhr.open("DELETE", "http://localhost:3000/students/" + id);
+         xhr.setRequestHeader("content-type", "application/json;chatset=UTF-8");
+         xhr.send();
+
+         xhr.onload = () => {
+            if (xhr.status === 200){
+               getDataFromJSONFile();
+            }
+         }
+      }
+   </script>
+</body>
+</html>
